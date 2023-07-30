@@ -21,6 +21,9 @@ pipeline {
             agent {
                 label "br-server-4"
             }
+            environment {
+                JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-arm64"
+            }
             steps {
                 sh """
                 echo $JAVA_HOME
