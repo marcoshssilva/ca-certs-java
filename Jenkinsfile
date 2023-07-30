@@ -1,8 +1,11 @@
 pipeline {
     agent any;
-    steps {
-        step("Check files") {
-            sh "tree -lh"
+    stages {
+        stage("Check files") {
+            steps {
+                sh "tree -lh"
+            }
         }
     }
+
 }
