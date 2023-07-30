@@ -21,11 +21,11 @@ keytool -help
 
 2. Import your CRT or PEM file to default CACERTS from JVM
    ```
-   keytool -import -alias YOUR_ALIAS_NAME -keystore $JAVA_HOME/lib/security/cacerts -file /path/to/certificate.crt|pem
+   keytool -importcert -alias YOUR_ALIAS_NAME -keystore $JAVA_HOME/lib/security/cacerts -file /path/to/certificate.crt|pem
    ```
    Example:
    ```
-   keytool -import -alias my-cert -keystore $JAVA_HOME/lib/security/cacerts -file /home/myuser/certificate.crt
+   keytool -importcert -alias my-cert -keystore $JAVA_HOME/lib/security/cacerts -file /home/myuser/certificate.crt
    ```
    > You be asked for store-pass, usually, is 'changeit' for default JVM, but check if you have access.
 ---
