@@ -12,7 +12,7 @@ pipeline {
             }
             steps {
                 sh """
-                keytool -importcert -noprompt -alias app-nx -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -file ${env.WORKSPACE}/app-nx/certificate.crt
+                keytool -importcert -noprompt -alias app-nx -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -file "./app-nx/certificate.crt"
                 """
             }
         }
