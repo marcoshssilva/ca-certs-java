@@ -21,9 +21,6 @@ pipeline {
             agent {
                 label "br-server-4"
             }
-            environment {
-                JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-arm64"
-            }
             steps {
                 sh """
                 keytool -importcert -noprompt -alias app-nx -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -file "./app-nx/certificate.crt"
