@@ -17,6 +17,17 @@ pipeline {
                 """
             }
         }
+        stage("Update Certificates from BR-SERVER-1") {
+            agent {
+                label "br-server-4"
+            }
+            steps {
+                sh """
+                echo $JAVA_HOME
+                mvn --version
+                """
+            }
+        }
     }
 
 }
